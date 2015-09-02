@@ -1,21 +1,13 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Blogger</title>
-  </head>
-  <body>
-    <h1>All Articles</h1>
+<h1>All Articles</h1>
 
-    <ul id="articles">
-      <% @articles.each do |article| %>
-        <li>
-          <%= link_to article.title, article_path(article) %>
-        </li>
-      <% end %>
-    </ul>
+<ul id="articles">
+  <% @articles.each do |article| %>
+    <li>
+      <%= link_to article.title, article_path(article) %>
+    </li>
+  <% end %>
+</ul>
 
-    <p>
-      <%= link_to "Create a New Article", new_article_path, class: "new_article" %>
-    </p>
-  </body>
-</html>
+<p>
+  <%= link_to "Create a New Article", new_article_path, class: "new_article" %>
+</p>
